@@ -10,7 +10,11 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/davinci
 
+
 BUILD_BROKEN_USES_NETWORK := true
+
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
 
 # Architecture
 TARGET_ARCH := arm64
