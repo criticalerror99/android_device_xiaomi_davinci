@@ -139,7 +139,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.wlan.vendor=qcom \
     ro.hardware.wlan.chip=39xx \
     ro.hardware.wlan.mimo=1
-
-# Havoc
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.havoc.maintainer=MountaserHalak
