@@ -27,9 +27,9 @@
 #define PARAM_NIT_300_FOD 4
 #define PARAM_NIT_NONE 0
 
-#define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/hbm"
-#define FOD_HBM_ON 1
-#define FOD_HBM_OFF 0
+#define FOD_HBM_PATH "/sys/class/drm/card0-DSI-1/disp_param"
+#define FOD_HBM_ON "0x20000"
+#define FOD_HBM_OFF "0xE0000"
 
 #define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
