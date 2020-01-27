@@ -546,6 +546,7 @@
 
     <!-- Shows the required view for in-display fingerprint -->
     <bool name="config_supportsInDisplayFingerprint">true</bool>
+    <bool name="config_needCustomFODView">true</bool>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
@@ -585,5 +586,8 @@
 
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <bool name="config_multiColorBatteryLed">false</bool>
 
 </resources>

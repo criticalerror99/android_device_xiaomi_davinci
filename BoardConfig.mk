@@ -10,6 +10,8 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/davinci
 
+BUILD_BROKEN_USES_NETWORK := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -47,7 +49,7 @@ BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/lineage_davinci_defconfig
+TARGET_KERNEL_CONFIG := davinci_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/davinci
 
 NEED_KERNEL_MODULE_SYSTEM := true
