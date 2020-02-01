@@ -20,23 +20,19 @@
 
 #include <android-base/logging.h>
 #include <cmath>
-<<<<<<< HEAD
+
 #include <fstream>
-=======
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
+
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_630_FOD 1
 #define PARAM_NIT_300_FOD 4
 #define PARAM_NIT_NONE 0
 
-<<<<<<< HEAD
-=======
 #define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_hbm"
 #define FOD_HBM_ON 1
 #define FOD_HBM_OFF 0
 
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
 #define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
@@ -107,18 +103,6 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-<<<<<<< HEAD
-    xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
-    if (get(BRIGHTNESS_PATH, 0) > 100) {
-        xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
-        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 3);
-    } else if (get(BRIGHTNESS_PATH, 0) != 0) {
-        xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_300_FOD);
-        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 5);
-    }
-
-    set(FOD_STATUS_PATH, FOD_STATUS_ON);
-=======
     set(FOD_HBM_PATH, FOD_HBM_ON);
 
     if (get(BRIGHTNESS_PATH, 0) > 100) {
@@ -127,16 +111,12 @@ Return<void> FingerprintInscreen::onPress() {
         xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     }
 
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-<<<<<<< HEAD
-    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
-=======
     set(FOD_HBM_PATH, FOD_HBM_OFF);
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
+
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     if (get(BRIGHTNESS_PATH, 0) > 100) {
         xiaomiDisplayFeatureService->setFeature(0, 11, 0, 3);
@@ -154,20 +134,9 @@ Return<void> FingerprintInscreen::onShowFODView() {
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
-<<<<<<< HEAD
-    xiaomiDisplayFeatureService->setFeature(0, 17, 0, 255);
-    xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
-    if (get(BRIGHTNESS_PATH, 0) > 100) {
-        xiaomiDisplayFeatureService->setFeature(0, 11, 0, 3);
-    } else if (get(BRIGHTNESS_PATH, 0) != 0) {
-        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
-        xiaomiDisplayFeatureService->setFeature(0, 11, 0, 5);
-    }
-=======
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     set(FOD_HBM_PATH, FOD_HBM_OFF);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
     return Void();
 }
 
@@ -209,10 +178,6 @@ Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
     }
 
     (void) brightness;
-<<<<<<< HEAD
-=======
-
->>>>>>> d1e0a73... davinci:  switched to HBM implementation
     return 255 * alpha;
 }
 
