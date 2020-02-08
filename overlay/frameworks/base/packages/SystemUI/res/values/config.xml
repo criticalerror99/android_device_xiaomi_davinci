@@ -28,6 +28,8 @@
     <integer name="config_maxVisibleNotificationIconsWhenDark">6</integer>
    
     <bool name="config_statusBarBurnInProtection">true</bool>
-
+     
+    <color name="config_fodColor">#40E0D0</color>
+     
 </resources>
 
