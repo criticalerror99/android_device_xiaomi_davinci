@@ -47,14 +47,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.hw=0 \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_gl_backpressure=1 \
-    debug.sf.early_app_phase_offset_ns=500000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_phase_offset_ns=500000 \
+    debug.sf.enable_hwc_vds=1 \
+    debug.egl.hw=0 \
+    debug.enable.sglscale=1 \
+    debug.gralloc.enable_fb_ubwc=1 \
     debug.sf.latch_unsignaled=1 \
-    debug.sf.enable_hwc_vds=1
+    debug.sf.recomputecrop=0 \
+    dev.pm.dyn_samplingrate=1
+
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
@@ -138,7 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RCS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0
+    persist.rcs.supported=1
 
 # Subsystem ramdump
 PRODUCT_PROPERTY_OVERRIDES += \
