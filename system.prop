@@ -208,6 +208,14 @@ persist.sys.wfd.virtual=0
 #property to enable HWC for VDS
 debug.sf.enable_hwc_vds=1
 
+debug.sf.latch_unsignaled=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.early_phase_offset_ns=500000
+debug.sf.early_app_phase_offset_ns=500000
+debug.sf.early_gl_phase_offset_ns=3000000
+debug.sf.early_gl_app_phase_offset_ns=15000000
+debug.sf.enable_egl_image_tracker=1
+
 # enable tunnel encoding for amrwb
 tunnel.audio.encode = true
 
