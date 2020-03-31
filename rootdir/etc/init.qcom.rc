@@ -167,6 +167,10 @@ service vendor.power-hal-1-2 /system/bin/true
 on boot
     write /sys/class/thermal/thermal_message/sconfig 10
 
+    # Allow system to modify exposure adjustment state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/msm_fb_ea_enable
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/msm_fb_ea_enable
+
 service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
     override
     class late_start
