@@ -22,4 +22,5 @@
     <dimen name="rounded_corner_radius_top">102.0px</dimen>
     <dimen name="rounded_corner_radius_bottom">87.0px</dimen>
     <dimen name="status_bar_extra_padding">12dp</dimen>
+    <dimen name="keyguard_security_fod_view_margin">145dp</dimen>
 </resources>
