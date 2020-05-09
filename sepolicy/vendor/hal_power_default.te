@@ -1,2 +1,10 @@
-allow hal_power_default input_device:dir r_dir_perms;
-allow hal_power_default input_device:chr_file rw_file_perms;
+allow hal_power_default sysfs:file { read open write getattr };
+allow hal_power_default input_device:dir { search };
+allow hal_power_default input_device:chr_file { read write open };
+allow hal_power_default sysfs_devices_system_cpu:file { write };
+allow hal_power_default sysfs_devfreq:dir { search };
+allow hal_power_default sysfs_devfreq:file { read write open };
+allow hal_power_default sysfs_kgsl:file { read write open };
+allow hal_power_default sysfs_kgsl:lnk_file { read };
+allow hal_power_default sysfs_devices_system_cpu:file { write };
+allow hal_power_default latency_device:chr_file { write open };
