@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     antradio_app
 
 # ANXCamera
-$(call inherit-product-if-exists, vendor/aeonax/ANXCamera/anx-vendor.mk)
+# $(call inherit-product-if-exists, vendor/aeonax/ANXCamera/anx-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
