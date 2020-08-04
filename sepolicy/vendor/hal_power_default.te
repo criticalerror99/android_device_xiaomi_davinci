@@ -8,3 +8,4 @@ allow hal_power_default sysfs_kgsl:file { read write open };
 allow hal_power_default sysfs_kgsl:lnk_file { read };
 allow hal_power_default sysfs_devices_system_cpu:file { write };
 allow hal_power_default latency_device:chr_file { write open };
+allow hal_power_default debugfs_sched_features:file rw_file_perms;
